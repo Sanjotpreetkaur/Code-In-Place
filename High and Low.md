@@ -22,12 +22,10 @@ def main():
     POINTS = 0
     while start == "yes" or start == "Yes" or start == "YES":
         print("Welcome to the High-Low Game!")
-
         comp_num, user_num = random_numbers()
         guess = input("Make a guess, High or Low? ")
         score = check_guess(guess, comp_num, user_num)
         POINTS = POINTS + score
-
         print(f'Your Points are {POINTS}.')
         start = input("Would you like to play a game of high or low? Yes or No: ")
     print(f"Thanks for playing, your total points were {POINTS}")
